@@ -1,7 +1,68 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500';
+@import 'https://fonts.googleapis.com/css?family=Playfair-Display:300,400,500';
+@import 'https://fonts.googleapis.com/css?family=Merriweather|Open+Sans';
+
+body {
+  color: #555;
+  font-family: "Open sans", "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6, strong {
+  color: #333;
+  font-family: "Merriweather", "Playfair Display", "Georgia", "Times New Roman", Times, serif;
+}
+
 .thumbnail {
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
 .cyan-to-pink-grad {
   background: linear-gradient(35deg, #CFF, #FCC);
+}
+
+.card {
+  width: 200px;
+  height: min-content;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: justify;
+  background-color: white;
+  animation-name: card-out;
+  animation-duration: 300ms;
+  animation-timing-function: ease-out;
+  border: 1px solid #f1f2f3;
+  hyphens: auto;
+}
+
+.card-title {
+  text-align: center;
+  line-height: 20px;
+
+}
+
+.card:hover {
+  animation-name: card-in;
+  animation-duration: 300ms ;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+@keyframes card-in {
+  100% {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  }
+}
+
+@keyframes card-out {
+  0% {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  }
+  100% {
+  }
 }

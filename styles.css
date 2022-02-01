@@ -188,6 +188,12 @@ main {
     .card {
       margin: 1em 0 1em 0;
     }
+    .inner-header {
+      width: 90%;
+    }
+    main {
+      width: 90%;
+    }
 }
 
 /* End Card */

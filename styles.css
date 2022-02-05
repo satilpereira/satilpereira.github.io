@@ -43,9 +43,9 @@ header {
   /*background-color: var(--global-color-primary);*/
   background-color: #00363d;
   background-color: var(--global-color-primary);
-  background: linear-gradient(to right, rgba(0, 54, 61, 1), rgba(0, 0, 0, 0) ), url('/new_test3.jpg');  background-repeat: no-repeat;
+  background: linear-gradient(to right, rgba(0, 54, 61, 1), rgba(0, 0, 0, 0) ), url('/orange-notebook.jpg');  background-repeat: no-repeat;
   background-size: cover;
-  background-position: right bottom;
+  background-position: center;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
   grid-template-rows: 70px 0.5fr 2fr 1.5fr 50px;

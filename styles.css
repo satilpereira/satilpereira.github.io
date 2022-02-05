@@ -175,6 +175,10 @@ header {
   background: linear-gradient(to right, rgba(0, 54, 61, 1), rgba(0, 0, 0, 0) );
 }
 
+@media (max-width: 480px) {
+  /* Media content for mobile devices */
+
+}
 /* End header */
 
 /* Navbar CSS */
@@ -198,8 +202,10 @@ nav {
   background-color: var(--global-color-primary);
   height: 70px;
   opacity: 1;
+  /*
   backdrop-filter: blur(30px);
   -webkit-backdrop-filter: blur(10px);
+  */
 }
 
 nav ul {
@@ -269,7 +275,90 @@ nav li:hover {
   100% {
     color: #ddd;
   }
+
 }
+/* Hamburguer menu*/
+.hamburguer-menu {
+  grid-column: 5/6;
+  grid-row: 1/2;
+  align-self: center;
+  justify-self: center;
+}
+
+#checkbox-menu {
+  position: relative;
+  opacity: 0;
+  
+}
+
+.hamburguer-menu label {
+  position: relative;
+  display: block;
+  height: 22px;
+  width: 30px;
+  opacity: 0;
+}
+
+.hamburguer-menu label span {
+  position: absolute;
+  display: block;
+  height: 5px;
+  width: 100%;
+  border-radius: 30px;
+  background-color: white;
+  transition: 250ms ease-in-out;
+}
+
+.hamburguer-menu label span:nth-child(1) {
+  top: -10px;
+}
+
+.hamburguer-menu label span:nth-child(2) {
+  top: -2px;
+}
+
+.hamburguer-menu label span:nth-child(3) {
+  top: 6px;
+}
+
+#checkbox-menu:checked + label span:nth-child(1) {
+  transform: rotate(-45deg);
+  top: -2px;
+}
+
+#checkbox-menu:checked + label span:nth-child(2) {
+  margin-left: 30px;
+  width: 0;
+  width: -2px;
+}
+
+#checkbox-menu:checked + label span:nth-child(3) {
+  transform: rotate(45deg);
+  top: -2px;
+}
+
+@media (max-width: 480px) {
+  .hamburguer-menu label {
+    opacity: 1;
+    margin-right: 2em;
+    cursor: pointer;
+  }
+  nav {
+    grid-template-columns: auto 2fr 1fr auto 1fr;
+    
+  }
+
+  .logo-container {
+    margin-left: 2em;
+  }
+
+  nav ul {
+    opacity: 0;
+    font-size: 1px;
+  }
+}
+  
+/* End hamburguer */
 
 /* End navbar */
 

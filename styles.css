@@ -123,20 +123,6 @@ header {
   animation-duration: 500ms;
   animation-timing-function: ease;
   animation-fill-mode: forwards;
-
-  animation-name: header-button-arriving;
-  animation-duration: 800ms;
-  animation-timing-function: ease-out;
-  animation-fill-mode: forwards;
-}
-
-@keyframes header-button-arriving {
-  0% {
-    margin-left: -700px;
-  }
-  100% {
-    margin: 0;
-  }
 }
 
 .header-intro-button:hover {

@@ -41,7 +41,8 @@ header {
   width: 100%;
   height: 600px;
   /*background-color: var(--global-color-primary);*/
-  background-image: url(/purple-notebook.jpg);
+  background-color: #00363d;
+  background-color: var(--global-color-primary);
   background: linear-gradient(to right, rgba(0, 54, 61, 1), rgba(0, 0, 0, 0) ), url('/new_test3.jpg');  background-repeat: no-repeat;
   background-size: cover;
   background-position: right bottom;
@@ -65,6 +66,41 @@ header {
   align-self: center;
 }
 
+.introduction-container p {
+  animation-name: open-screen-header;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+  animation-duration: 1200ms;
+}
+
+.introduction-container h1 {
+  animation-name: open-screen-header-h1;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+  animation-duration: 1000ms;
+}
+
+@keyframes open-screen-header {
+  0% {
+    margin-left: -700px;
+    margin-top: 1000px;
+    padding-right: 700px;
+  }
+  100% {
+    margin: 0;
+  }
+}
+
+@keyframes open-screen-header-h1 {
+  0% {
+    margin-top: -1000px;
+  }
+  100% {
+    margin: 0;
+    padding-bottom: 1rem;
+  }
+}
+
 .introduction-container h1 {
   margin: 0;
   color: white ;
@@ -76,7 +112,6 @@ header {
   grid-row: 4/5;
   align-self: start;
   justify-self: start;
-  margin: 0 !important;
   padding: 0rem 1.2rem;
   border-radius: 30px 5px;
   background-color: white;
@@ -88,6 +123,20 @@ header {
   animation-duration: 500ms;
   animation-timing-function: ease;
   animation-fill-mode: forwards;
+
+  animation-name: header-button-arriving;
+  animation-duration: 800ms;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes header-button-arriving {
+  0% {
+    margin-left: -700px;
+  }
+  100% {
+    margin: 0;
+  }
 }
 
 .header-intro-button:hover {

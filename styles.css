@@ -7,6 +7,20 @@
   --global-color-primary: #00363d;
 }
 
+.noSelect {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+.noSelect:focus {
+  outline: none !important;
+}
+
 *, a {
   margin: 0;
   padding: 0;
@@ -288,7 +302,6 @@ nav li:hover {
 #checkbox-menu {
   position: relative;
   opacity: 0;
-  
 }
 
 .hamburguer-menu label {

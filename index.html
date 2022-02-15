@@ -38,15 +38,24 @@
                 <li><a href="#contact">Contact Me</a></li>
             </ul>
             <div class="hamburguer-menu"><!-- This is a cool hamburguer -->
-                <input type="checkbox" id="checkbox-menu">
+                <input type="checkbox" id="checkbox-menu" onclick="myFunction()">
                 <label for="checkbox-menu" class="noSelect">
                     <span></span>
                     <span></span>
                     <span></span>
-                </label>
-
+                </label>                
             </div>
         </nav>
+        <div class="responsive-menu">
+            <div class="inner-menu">
+                <ul>
+                    <li class="nav-active"><a style="align-self: right;" href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
+                </ul>
+            </div>
+        </div>
         
         <main>
             <div class="round-border-header"></div>
@@ -91,5 +100,24 @@
             <!-- Footer content -->
             <p>Copyright &copy; 2022 Satil Pereira</p>
         </footer>
+
+        <script>
+            function myFunction() {
+                const cb = document.querySelector('#checkbox-menu');
+                console.log(cb.checked); // false
+                if (cb.checked) {
+                    var elems = document.getElementsByClassName('responsive-menu');
+                    for (var i=0;i<elems.length;i+=1){
+                        elems[i].style.display = 'block';
+                    }
+                }
+                else {
+                    var elems = document.getElementsByClassName('responsive-menu');
+                    for (var i=0;i<elems.length;i+=1){
+                        elems[i].style.display = 'none';
+                    }
+                }
+            }
+        </script>
     </body>
 </html>

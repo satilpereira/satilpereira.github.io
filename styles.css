@@ -385,6 +385,45 @@ nav li:hover {
   
 /* End hamburguer */
 
+/* Responsive Menu */
+.responsive-menu {
+  display: none;
+  
+}
+
+.inner-menu {
+  
+}
+
+@media (max-width: 480px) {
+  .responsive-menu {
+    display: none;
+    position: fixed;
+    top: 69px;
+    left: 20%;
+    background-color: var(--global-color-primary);
+    width: 80%;
+    height: 100%;
+    z-index: 10;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .inner-menu {
+    position: relative;
+    float: right;
+    padding: 70px;
+    color: white;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 2.5;
+  }  
+}
+
+
+
+/* End Responsive Menu*/
 /* End navbar */
 
 /* Main CSS*/

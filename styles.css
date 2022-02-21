@@ -388,11 +388,11 @@ nav li:hover {
 /* Responsive Menu */
 .responsive-menu {
   display: none;
-  
+  position: fixed;
 }
 
 .inner-menu {
-  
+
 }
 
 @media (max-width: 480px) {
@@ -418,7 +418,7 @@ nav li:hover {
     font-size: 24px;
     font-weight: 800;
     line-height: 2.5;
-  }  
+  }
 }
 
 

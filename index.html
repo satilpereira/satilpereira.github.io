@@ -10,114 +10,45 @@
         <link rel="stylesheet" type="text/css" href="styles.css">
     </head>
     <body>
-        <header id="home">
-            <div class="round-border"></div>
-            <div class="shoutout-img">Photo by <a href="https://unsplash.com/@alesnesetril?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"><b style="color: #777;">Ales Nesetril</b></a> on <a href="https://unsplash.com/s/photos/tech?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"><b style="color: #777;">Unsplash</b></a>
-            </div>
-            <div class="color-bkg-header-left"></div>
-            <!-- Header content -->
-            <div class="ltr-gradient-header"></div>
-            <div class="introduction-container">
-                <h1>Sobre mim</h1>
-                <p>Olá, Meu nome é Satil dos Santos, eu amo fazer arte e resolver problemas.</p>
-            </div>
-            <a href="#about" class="header-intro-button">
-                <p>Saber mais</p>
-            </a>
-            
+        <header class="header-container">
+            <div class="contacts-container"></div>
+            <div class="background-header-image"></div>
+            <div class="darken-image"></div>
         </header>
-        <div class="navbar"></div>
-        <nav>
-            <div class="logo-container">
-                <h1>Web<span><b>Satil</b></span></h1>
-            </div>
-            <ul>
-                <li class="nav-active"><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact Me</a></li>
+        <nav class="navbar">
+            <h1 class="logo">LoremIpsum</h1>
+            <ul class="nav-buttons">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
-            <div class="hamburguer-menu"><!-- This is a cool hamburguer -->
-                <input type="checkbox" id="checkbox-menu" onclick="myFunction()">
-                <label for="checkbox-menu" class="noSelect">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </label>                
-            </div>
         </nav>
-        <div class="responsive-menu">
-            <div class="inner-menu">
-                <ul>
-                    <li class="nav-active"><a style="align-self: right;" href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact Me</a></li>
-                </ul>
-            </div>
-        </div>
-        
         <main>
-            <div class="round-border-header"></div>
-                <section id="about" class="about-container">
-                    <div class="blurry-text-container">
-                        <div class="blurry-top-block">
-                            <h3>Olá meus nobres</h3>
-                        </div>
-                        <div class="blurry-bot-block">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua</div>
-                    </div>
-                </section>
-                <section class="about-container-text"></section>
-                <section id="portfolio" class="cards-container">
-                        <div class="card">
-                            <a href="#">
-                                <h2 class="card-title">Lorem ipsum</h2>
-                                <hr>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
-                                    eiusmod tempor incididunt ut labore et dolore magna aliqua</p></a>
-                        </div>
-                        <div class="card">
-                            <a href="#">
-                                <h2 class="card-title">Lorem ipsum</h2>
-                                <hr>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
-                                    eiusmod tempor incididunt ut labore et dolore magna aliqua</p></a>
-                                
-                        </div>
-                        <div class="card">
-                            <a href="#">
-                                <h2 class="card-title">Lorem ipsum</h2>
-                                <hr>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
-                                    eiusmod tempor incididunt ut labore et dolore magna aliqua</p></a>
-                        </div>
-                </section>
-                <!-- Main content -->
+            <section class="text-block-1">
+                <p>Como ainda não tenho projetos para colocar em meu portifolio, decidi trazer algumas de minhas artes, espero que gostem</p>
+            </section>
+            <section class="drawing-container">
+                <div class="left-block">
+                    <img src="/oniChan.png" alt="Demon girl drawing">
+                </div>
+                <div class="right-block">
+                    <h2>Oni chan</h2>
+                    <p>A maioria dos meus trabalhos são autorais, e este também é um deles. Eu usei meu próprio corpo para referenciar as poses e obter esse resultado. A temática dele é uma garota <a href="https://pt.wikipedia.org/wiki/Oni" target="_blank">oni</a> com uma espada Katana, a famosa espada samurai.</p>
+                </div>
+            </section>
+           <section class="drawing-container-2">
+                <div class="left-block text-on-right">
+                    <img src="/Kid Goku.jpg" alt="Demon girl drawing">
+                </div>
+                <div class="right-block text-on-right">
+                    <h2>Kid Goku</h2>
+                    <p>Este desenho é uma fan art que fiz do kid goku, presente na série original de Dragon Ball de 1986, quandoa  série abordava o mito chinês do rei macaco, a jornada para o oeste. Foi uma das minhas séries japonesas favoritas e marcou minha infancia.</p>
+                </div>
+            </section> 
         </main>
-        
         <footer>
-            <!-- Footer content -->
-            <p>Copyright &copy; 2022 Satil Pereira</p>
+            <p>CopyrightCopyright (c) 2022 Satil Pereira</p>
         </footer>
-
-        <script>
-            function myFunction() {
-                const cb = document.querySelector('#checkbox-menu');
-                console.log(cb.checked); // false
-                if (cb.checked) {
-                    var elems = document.getElementsByClassName('responsive-menu');
-                    for (var i=0;i<elems.length;i+=1){
-                        elems[i].style.display = 'block';
-                    }
-                }
-                else {
-                    var elems = document.getElementsByClassName('responsive-menu');
-                    for (var i=0;i<elems.length;i+=1){
-                        elems[i].style.display = 'none';
-                    }
-                }
-            }
-        </script>
+        <script src="/scripts.js"></script>
     </body>
 </html>

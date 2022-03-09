@@ -10,10 +10,115 @@
         <link rel="stylesheet" type="text/css" href="styles.css">
     </head>
     <body>
-        Em desenvolvimento
+        <header id="home">
+            <h2>world</h2>
+            <div class="round-border"></div>
+            <div class="shoutout-img">Photo by <a href="https://unsplash.com/@alesnesetril?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"><b style="color: #777;">Ales Nesetril</b></a> on <a href="https://unsplash.com/s/photos/tech?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"><b style="color: #777;">Unsplash</b></a>
+            </div>
+            <div class="color-bkg-header-left"></div>
+            <!-- Header content -->
+            <div class="ltr-gradient-header"></div>
+            <div class="introduction-container">
+                <h1>Sobre mim</h1>
+                <p>Olá, Meu nome é Satil dos Santos, eu amo fazer arte e resolver problemas.</p>
+            </div>
+            <a href="#about" class="header-intro-button">
+                <p>Saber mais</p>
+            </a>
+            
+        </header>
+        <div class="navbar"></div>
+        <nav>
+            <div class="logo-container">
+                <h1>Web<span><b>Satil</b></span></h1>
+            </div>
+            <ul>
+                <li class="nav-active"><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+            </ul>
+            <div class="hamburguer-menu"><!-- This is a cool hamburguer -->
+                <input type="checkbox" id="checkbox-menu" onclick="myFunction()">
+                <label for="checkbox-menu" class="noSelect">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>                
+            </div>
+        </nav>
+        <div class="responsive-menu">
+            <div class="inner-menu">
+                <ul>
+                    <li class="nav-active"><a style="align-self: right;" href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <main>
+            <div class="round-border-header"></div>
+                <section id="about" class="about-container">
+                    <div class="blurry-text-container">
+                        <div class="blurry-top-block">
+                            <h3>Olá meus nobres</h3>
+                        </div>
+                        <div class="blurry-bot-block">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua</div>
+                    </div>
+                </section>
+                <section class="about-container-text"></section>
+                <section id="portfolio" class="cards-container">
+                        <div class="card">
+                            <a href="#">
+                                <h2 class="card-title">Lorem ipsum</h2>
+                                <hr>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
+                                    eiusmod tempor incididunt ut labore et dolore magna aliqua</p></a>
+                        </div>
+                        <div class="card">
+                            <a href="#">
+                                <h2 class="card-title">Lorem ipsum</h2>
+                                <hr>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
+                                    eiusmod tempor incididunt ut labore et dolore magna aliqua</p></a>
+                                
+                        </div>
+                        <div class="card">
+                            <a href="#">
+                                <h2 class="card-title">Lorem ipsum</h2>
+                                <hr>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
+                                    eiusmod tempor incididunt ut labore et dolore magna aliqua</p></a>
+                        </div>
+                </section>
+                <!-- Main content -->
+        </main>
+        
         <footer>
-            <p>Copyright (c) 2022 Satil Pereira</p>
+            <!-- Footer content -->
+            <p>Copyright &copy; 2022 Satil Pereira</p>
         </footer>
-        <script src="/scripts.js"></script>
+
+        <script>
+            function myFunction() {
+                const cb = document.querySelector('#checkbox-menu');
+                console.log(cb.checked); // false
+                if (cb.checked) {
+                    var elems = document.getElementsByClassName('responsive-menu');
+                    for (var i=0;i<elems.length;i+=1){
+                        elems[i].style.display = 'block';
+                    }
+                }
+                else {
+                    var elems = document.getElementsByClassName('responsive-menu');
+                    for (var i=0;i<elems.length;i+=1){
+                        elems[i].style.display = 'none';
+                    }
+                }
+            }
+        </script>
     </body>
 </html>

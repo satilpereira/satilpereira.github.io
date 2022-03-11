@@ -14,6 +14,7 @@
   box-sizing: border-box;
   line-height: 1.5;
   font-family: roboto, helvetica, sans-serif;
+  text-decoration: none;
 }
 
 /* ------------------------- *\
@@ -50,15 +51,18 @@ nav {
   align-items: center;
 }
 
+#cont-but {
+  grid-column: 3/4;
+  justify-self: right;
+  align-self: center;
+}
 
 .contact-button {
   display: flex;
   justify-content: center;
   align-items: center;
-  justify-self: right;
   cursor: pointer;
   align-self: center;
-  grid-column: 3/4;
   background-color: white;
   color: #7510F7;
   height: 3em;
@@ -142,6 +146,7 @@ nav {
   border-style: none;
 }
 
+
 .p-container {
   width: fit-content;
   height: auto;
@@ -168,7 +173,7 @@ nav {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 948px) {
   .brief h1 {
     font-size: 28px;
   }
@@ -402,4 +407,188 @@ ul li {
     border-left: 0;
     border-right: 0;
   } 
+}
+
+/* ------------------ *\
+  # FOOTER
+\* ------------------ */
+
+.footer {
+  width: 100%;
+  height: 40em;
+  background-color: #7510F7;
+}
+
+.footer-container {
+  max-width: 100%;
+  height: auto;
+  display: flex;
+}
+
+.block-container {
+  max-width: 80em;
+  height: auto;
+  position: relative;
+  top: -4em;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+.footer-container-item {
+  padding: 2em;
+  max-width: 78em;
+  height: 100%;
+  border-radius: 10px;
+  margin: 2em;
+  background-color: #140b4b;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  color: white;
+  height: auto;
+}
+
+.hire-me {
+  align-self: center;
+  justify-self: center;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.liked-my-portfolio {
+  padding: 1em;
+  justify-self: center;
+  align-self: center;
+  text-align: center;
+  font-weight: 100;
+  font-size: 16px;
+}
+
+.contact-button-2 {
+  align-self: center;
+  justify-self: center;
+  border: 2px solid #7510F7;
+  border-radius: 50px;
+  padding: 0.8em 2.2em;
+  font-size: 16px;
+  font-weight: 100;
+}
+
+.contact-button-2:hover {
+  background-color: #7510F7;
+  transition: 200ms ease-in-out;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .footer-container-item {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, 1fr);
+    }
+
+    .footer {
+      height: 50em;
+    }
+}
+
+.networking {
+  position: relative;
+  bottom: 0;
+  max-width: 30em;
+  height: fit-content;
+  margin: 0 auto;
+}
+
+.social-media {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #DDD;
+}
+
+.social-media p {
+  padding: 2em;
+  font-size: 22px;
+  font-weight: 100;
+}
+
+.social {
+  width: fit-content;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+}
+
+.github {
+  grid-row: 1/2;
+  grid-column: 1/2;
+  width: 60px;
+  height: 60px;
+  background-image: url(/icons8-github.svg);
+  background-size: cover;
+  margin: 0.5em;
+}
+
+.linkedin {
+  grid-row: 1/2;
+  grid-column: 2/3;
+  width: 60px;
+  height: 60px;
+  background-image: url(/icons8-linkedin.svg);
+  background-size: cover;
+  margin: 0.5em;
+}
+
+.mail {
+  grid-row: 1/2;
+  grid-column: 3/4;
+  width: 60px;
+  height: 60px;
+  background-image: url(/icons8-mail.svg);
+  background-size: cover;
+  margin: 0.5em;
+}
+
+.whatsapp {
+  grid-row: 1/2;
+  grid-column: 4/5;
+  width: 60px;
+  height: 60px;
+  background-image: url(/icons8-whatsapp.svg);
+  background-size: cover;
+  margin: 0.5em;
+}
+
+#copyright {
+  font-size: 16px;
+  color: #DDD;
+  margin: 1em;
+}
+
+#powered {
+  padding: 0;
+  font-size: 12px;
+
+}
+
+#powered a {
+  text-decoration: none;
+  color: #DDD;
+}
+
+#powered a:visited {
+  text-decoration: none;
+  color: #DDD;
+}
+
+#powered a:active {
+  text-decoration: none;
+  color: #DDD;
+}
+
+#powered strong {
+  font-weight: 450;
 }

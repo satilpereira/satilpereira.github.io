@@ -33,7 +33,7 @@ nav {
   margin: 2em 1.5em;
   width: 80em;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: auto 1fr 1fr;
   grid-template-rows: 1fr;
 }
 
@@ -43,13 +43,20 @@ nav {
   background-size: cover;
   width: 70px;
   height: 70px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  justify-self: left;
+  align-items: center;
 }
+
 
 .contact-button {
   display: flex;
   justify-content: center;
   align-items: center;
   justify-self: right;
+  cursor: pointer;
   align-self: center;
   grid-column: 3/4;
   background-color: white;
@@ -58,6 +65,7 @@ nav {
   width: 7.5em;
   border: 2px solid #7510F7;
   border-radius: 50px;
+  transition: 200ms ease-in-out;
 }
 
 .contact-button:hover {

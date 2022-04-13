@@ -259,6 +259,7 @@ de forma a otimizar o uso do espaço em dispositivos menores*/
     animation: 850ms blink step-end infinite;
 }
 
+
 @keyframes "blink" {
   from, to {
     color: transparent;

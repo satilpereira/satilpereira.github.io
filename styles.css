@@ -72,6 +72,14 @@ nav {
   transition: 200ms ease-in-out;
 }
 
+/* Modificar essa parte do código para screens menores 
+de forma a otimizar o uso do espaço em dispositivos menores*/
+@media (max-width: 425px) {
+  .contact-button {
+    opacity: 1;
+  }  
+}
+
 .contact-button:hover {
   transition: 200ms ease-in-out;
   background-color: #7510F7;
@@ -239,27 +247,76 @@ nav {
   }
 }
 
-.typewriter {
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid #7510F7; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .15em; /* Adjust as needed */
-  animation: 
-    typing 3.5s steps(40, end),
-    blink-caret .75s step-end infinite;
+.blinking-cursor {
+    font-size: 20px;
+    align-self: center;
+    font-weight: 600;
+    color: #2E3D48;
+    -webkit-animation: 850ms blink step-end infinite;
+    -moz-animation: 850ms blink step-end infinite;
+    -ms-animation: 850ms blink step-end infinite;
+    -o-animation: 850ms blink step-end infinite;
+    animation: 850ms blink step-end infinite;
 }
 
-/* The typing effect */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+@keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: #7510F7;
+  }
 }
 
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: #7510F7; }
+@-moz-keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: #7510F7;
+  }
+}
+
+@-webkit-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: #7510F7;
+  }
+}
+
+@-ms-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: #7510F7;
+  }
+}
+
+@-o-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: #7510F7;
+  }
+}
+
+.typewriter-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    font-family: "Audiowide", cursive;
+    color: #555;
+}
+
+#demo {
+  margin-top: 0;
+  align-self: center;
 }
 
 .icon-container {
@@ -272,7 +329,6 @@ nav {
   height: auto;
   bottom: 0;
 }
-
 
 /* ----------------- *\
   # MAIN-SECTION
